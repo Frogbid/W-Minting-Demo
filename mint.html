@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GK0W94TCW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-0GK0W94TCW');
+    </script>
+    <!--<link rel="icon" sizes="16x16 32x32 48x48 64x64" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">-->
+    <!--<link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+    <link href="unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="unpkg.com/swiper%407.4.1/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="unpkg.com/regenerator-runtime%400.13.1/runtime.js"></script>
+    <script src="peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+    <script type="text/javascript" src="unpkg.com/web3%401.2.11/dist/web3.min.js"></script>
+    <title>Minting Demo</title>
+</head>
+<body>
+<div class="row" style="background-color: #000000; height: 100px;  width:100%; align-items: center; justify-content: center">
+    <h1 style="color: #fe04ff"> Header Section</h1>
+</div>
+<section class="mint-section" id="minting">
+    <div class="container">
+        <div class="mint">
+            <div class="mint__wrap">
+                <h2 class="mint__title section-title">Mint Collection Name</h2>
+                <p class="mint__text">
+                    Total minted: <span class="total-minted">0 / 5000</span></p>
+                <p class="mint__text">
+                    0.08 Eth + Gas fee <br>Max 20 Collection Name per transaction</p>
+                <form class="form" action="#">
+                    <div class="form__wrap">
+                        <div class="form__row">
+                            <div class="form__field">
+                                <button class="form__btn-add input-wrap-right" type="button" onclick="minus();">-</button>
+                                <input class="form__input mint-input" type="number" name="#" id="box" value="1">
+                                <button class="form__btn-add input-wrap-right" type="button" onclick="plus();">+</button>
+                            </div>
+                            <button class="form__btn-value input-five-button" type="button" onclick="showme(5)">5</button>
+                            <button class="form__btn-value input-ten-button" type="button" onclick="showme(10)">10</button>
+                            <button class="form__btn-value input-twenty-button" type="button" onclick="showme(20)">20</button>
+                        </div>
+                        <button class="form__btn js-popup-open" type="button">Connect wallet</button>
+                        <button class="form__btn mint-button" type="button">MINT Collection Name</button>
+                    </div>
+                </form>
+                <div class="links-wrap"><a class="mint__link"
+                                           href="#"
+                                           target="_blank">View Contract </a></div>
+                <p class="mint__descr">Please use Chrome/Firefox with metamask extension for PC or metamask app
+                    for mobile</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function showme(count) {
+        document.getElementById("box").value = count;
+    }
+
+    function plus (){
+        let x = document.getElementById("box").value;
+        x++;
+        document.getElementById("box").value=x;
+    }
+
+    function minus (){
+        let x = parseInt(document.getElementById("box").value);
+        if (x>1){
+            x--;
+        }
+
+        document.getElementById("box").value=x;
+    }
+
+
+</script>
+
+</body>
+</html>
